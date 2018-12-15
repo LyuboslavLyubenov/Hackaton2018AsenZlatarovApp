@@ -28,8 +28,13 @@ using HakatonApp.Data.Models;
 
 #line default
 #line hidden
+#line 4 "D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\Areas\Quests\Views\_ViewImports.cshtml"
+using HakatonApp.Web.Areas.Quests.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Areas/Quests/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d899d16deb36586f2e5abf2a8d2371c619531adc", @"/Areas/Quests/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c3245de03fa45d8ad20b7ec52236f5c22f7561c8", @"/Areas/Quests/Views/_ViewImports.cshtml")]
     public class Areas_Quests_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

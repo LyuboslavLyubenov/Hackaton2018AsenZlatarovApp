@@ -39,7 +39,7 @@
         [Route("/Quest/Add")]
         [HttpGet]
         public IActionResult Add()
-            => View();
+            => View(new QuestCreateFormModel());
 
         [Authorize(Roles = RoleAdmin + ", " + RoleEditor)]
         [Route("/Quest/Upadate/{id}")]

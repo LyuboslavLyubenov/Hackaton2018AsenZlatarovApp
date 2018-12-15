@@ -1,22 +1,33 @@
-﻿@{
+﻿@model QuestCreateFormModel
+@{
     ViewData["Title"] = "Add";
 }
 
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Име</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Описание</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-        <label for="exampleInputFile">Снимки</label>
-        <input type="file" id="exampleInputFile">
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<div class="container">
+    <form asp-area="Qests" enctype="multipart/form-data" asp-controller="Quest" asp-action="Add" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name">Име</label>
+            <input asp-for="Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Описание</label>
+            <input id="description" asp-for="Description" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="Images">Снимки</label>
+            <input type="file" asp-for="Images">
+        </div>
+        <button type="submit" class="btn btn-default">Изпрати</button>
+    </form>
+</div>
 
+@section Scripts{
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+    <script>
+  tinymce.init({
+    selector: '#description'
+  });
+    </script>
+}
 
