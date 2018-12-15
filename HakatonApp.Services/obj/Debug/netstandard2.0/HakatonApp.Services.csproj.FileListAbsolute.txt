@@ -26,3 +26,5 @@ D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Services\obj\Debug\n
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Services\obj\Debug\netstandard2.0\HakatonApp.Services.csproj.CopyComplete
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Services\obj\Debug\netstandard2.0\HakatonApp.Services.dll
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Services\obj\Debug\netstandard2.0\HakatonApp.Services.pdb
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Services\obj\Debug\netstandard2.0\HakatonApp.Services.SanitizerService.resources
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Services\obj\Debug\netstandard2.0\HakatonApp.Services.csproj.GenerateResource.cache

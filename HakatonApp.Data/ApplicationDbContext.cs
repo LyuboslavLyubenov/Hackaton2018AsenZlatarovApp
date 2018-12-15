@@ -13,9 +13,15 @@
 
         public DbSet<Quest> Quests { get; set; }
 
+        public DbSet<Voucher> Vouchers { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder
+                .Entity<Voucher>()
+                .HasOne<User>();
         }
     }
 }
