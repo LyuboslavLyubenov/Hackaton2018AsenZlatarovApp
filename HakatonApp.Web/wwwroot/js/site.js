@@ -1,4 +1,9 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿$(function () {
+    $('#carousel').slick();
+    $('#second_menu button').click(function (event) {
+        event.stopPropagation();
+        $('.second-content').css('display', 'none');
+        let id = $(this).attr('href');
+        $('#' + id).css('display', 'block');
+    });
+});
