@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-HakatonApp.Web-91506700-4815-4309-AB00-880B21E984FC</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HakatonApp.Common\HakatonApp.Common.csproj" />
+    <ProjectReference Include="..\HakatonApp.Services\HakatonApp.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Services\" />
+    <Folder Include="Areas\Quests\Controllers\" />
+    <Folder Include="Areas\Quests\Data\" />
+    <Folder Include="Areas\Quests\Models\" />
+    <Folder Include="Areas\Quests\Views\" />
+  </ItemGroup>
+
+</Project>
