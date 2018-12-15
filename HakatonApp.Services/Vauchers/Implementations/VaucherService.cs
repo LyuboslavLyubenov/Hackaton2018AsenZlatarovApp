@@ -37,5 +37,27 @@
 
             return true;
         }
+
+        public IEnumerable<string> GetCodes(int questId)
+            => this.db
+                .Vouchers
+                .Where(v => v.QuestId == questId)
+                .Select(v => v.Code)
+                .ToList();
+
+        public bool UseVoucher(string code)
+        {
+            try
+            {
+                var voucher = this.db.Vouchers.Where(v => v.Code == code).FirstOrDefault();
+                this.db.Vouchers.Remove(voucher);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

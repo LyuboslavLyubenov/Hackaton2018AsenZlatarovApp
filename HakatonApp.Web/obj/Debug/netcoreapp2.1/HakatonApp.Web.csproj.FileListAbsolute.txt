@@ -146,3 +146,6 @@ D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcor
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\HakatonApp.Web.csproj.CopyComplete
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\HakatonApp.Web.dll
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\HakatonApp.Web.pdb
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\_ViewImports.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\_ViewStart.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\Add.g.cshtml.cs

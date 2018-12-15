@@ -8,6 +8,7 @@
 
     using static HakatonApp.Common.GlobalConstants;
 
+    [Area("Quests")]
     public class QuestController : Controller
     {
         private readonly IQuestService questService;
@@ -34,7 +35,7 @@
             return View();
         }
 
-        [Authorize]
+        //[Authorize]
         [Route("/Quest/Add")]
         [HttpGet]
         public IActionResult Add()
@@ -53,7 +54,7 @@
             this.questService.UpdateQuest(id, quest.Name, description, quest.StatusId);
             this.imageService.SaveImages(quest.Images, quest.Name);
             
-            return View();
+            return null;
         }
 
         [Authorize(Roles = RoleAdmin + ", " + RoleEditor)]
@@ -65,13 +66,13 @@
         }
 
         [Authorize(Roles = RoleAdmin + ", " + RoleEditor)]
-        [Route("/Qests/Approve")]
+        [Route("/Quest/Approve/{id}")]
         [HttpPost]
         public IActionResult ApproveQuest(int id, int volantiersNeeded, int pointsPerPerson)
         {
-            this.questService.ApproveQuest(id, volantiersNeeded, pointsPerPerson);
+            this.questService.ApproveQuest(id, volantiersNeeded, pointsPerPerson);  
 
-            return View();
+            return null;
         }
     }
 }

@@ -18,10 +18,18 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Areas\Quests\Views\" />
     <Folder Include="Areas\Vouchers\Models\" />
     <Folder Include="Areas\Vouchers\Views\" />
     <Folder Include="wwwroot\QuestImages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\Quests\Views\_ViewImports.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Quests\Views\_ViewStart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
   </ItemGroup>
 
 </Project>
