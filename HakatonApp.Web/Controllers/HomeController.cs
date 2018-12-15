@@ -47,7 +47,7 @@ namespace HakatonApp.Web.Controllers
                         Title = "Slider item title 3 sadsadsadsasadd dddsldk kkk",
                     },
                 },
-                TopInitiatives = new []
+                ArchivedInitiatives = new []
                 {
                     new Initiative()
                     {

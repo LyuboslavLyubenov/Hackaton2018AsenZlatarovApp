@@ -20,11 +20,20 @@
 </head>
 <body>
     
-    <partial name="_CookieConsentPartial" />
-
     <div>
+        <nav id="navigationbar">
+            <ul style="font-size: 18pt; color:#CCCCCC !important;">
+                <li>
+                    <div style="position: relative; left: 5pt; font-weight: bold; top: 5pt;"><a href="/">Активен Бургас</a></div>
+                    <div style="position: relative; left: 35pt; top: -2.5pt;"><i>Направи първата крачка за по-добър град!</i></div>
+                </li>
+                <li style="float: right;"><a asp-controller="Home" asp-action="Contacts" style="color:#CCCCCC !important; font-size: 16pt; line-height: 30pt;">Контакти</a></li>
+                <li style="float: right;"><a href="/Identity/Account/Login" style="color:#CCCCCC !important; font-size: 16pt; line-height: 30pt;">Вход</a></li>
+            </ul>
+        </nav>
+
         @RenderBody()
-        <hr />
+        <partial name="_CookieConsentPartial" />
         <footer>
             <p>&copy; 2018 - HakatonApp.Web</p>
         </footer>

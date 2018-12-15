@@ -4,6 +4,6 @@
         event.stopPropagation();
         $('.second-content').css('display', 'none');
         let id = $(this).attr('href');
-        $('#' + id).css('display', 'block');
+        $('#' + id).css('display', 'flex');
     });
 });
