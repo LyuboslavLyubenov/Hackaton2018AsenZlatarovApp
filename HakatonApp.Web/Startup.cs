@@ -11,6 +11,7 @@
     using HakatonApp.Web.Data.Data;
     using HakatonApp.Data.Models;
     using Extentions;
+    using HakatonApp.Services;
 
     public class Startup
     {
@@ -48,6 +49,9 @@
                 fo.AppId = Configuration["Authentication:Facebook:AppId"];
                 fo.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
             });
+
+            services.AddSingleton<IRandomGenerator, RandomGenerator>();
+            services.AutoloadServices();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

@@ -9,7 +9,6 @@ C:\Users\Admin\source\repos\HakatonApp.Web\HakatonApp.Common\obj\Debug\netstanda
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\bin\Debug\netstandard2.0\HakatonApp.Common.deps.json
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\bin\Debug\netstandard2.0\HakatonApp.Common.dll
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\bin\Debug\netstandard2.0\HakatonApp.Common.pdb
-D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.csprojAssemblyReference.cache
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.csproj.CoreCompileInputs.cache
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.AssemblyInfoInputs.cache
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.AssemblyInfo.cs

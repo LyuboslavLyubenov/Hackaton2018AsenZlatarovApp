@@ -18,10 +18,10 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Areas\Quests\Controllers\" />
-    <Folder Include="Areas\Quests\Data\" />
-    <Folder Include="Areas\Quests\Models\" />
     <Folder Include="Areas\Quests\Views\" />
+    <Folder Include="Areas\Vouchers\Models\" />
+    <Folder Include="Areas\Vouchers\Views\" />
+    <Folder Include="wwwroot\QuestImages\" />
   </ItemGroup>
 
 </Project>
