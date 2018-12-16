@@ -33,11 +33,13 @@
                     <a asp-area="Vouchers" asp-controller="Voucher" asp-action="SendVoucher" asp-all-route-data="data" class="btn btn-success float-right">Изпрати ваучер</a>
                 </div>
             }
-            @if (User.Identity.IsAuthenticated)
+            else
             {
                 <div class="text-center">
                     @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
-                    <a asp-area="Quests" asp-controller="Quest" asp-action="LikeQuest" asp-all-route-data="data" class="btn btn-success float-right">Харесай</a>
+                    <form action="/Quest/Like/@(Model.Id)" @*asp-area="Quests" asp-controller="Quest" asp-action="LikedQuest" asp-all-route-data="data"*@ method="post">
+                        <input type="submit" value="Харесай" class="btn btn-success" />
+                    </form>
                 </div>
             }
         </div>

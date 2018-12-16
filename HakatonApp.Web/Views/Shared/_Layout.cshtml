@@ -29,7 +29,14 @@
                     <div style="position: relative; left: 35pt; top: -2.5pt;"><i>Направи първата крачка за по-добър град!</i></div>
                 </li>
                 <li style="float: right;"><a asp-controller="Home" asp-action="Contacts" style="color:#CCCCCC !important; font-size: 16pt; line-height: 30pt;">Контакти</a></li>
-                <li style="float: right;"><a href="/Identity/Account/Login" style="color:#CCCCCC !important; font-size: 16pt; line-height: 30pt;">Вход</a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li style="float: right;"><a href="/Identity/Account/Login" style="color:#CCCCCC !important; font-size: 16pt; line-height: 30pt;">Профил</a></li>
+                }
+                else
+                {
+                    <li style="float: right;"><a href="/Identity/Account/Login" style="color:#CCCCCC !important; font-size: 16pt; line-height: 30pt;">Вход</a></li>
+                }
             </ul>
         </nav>
 

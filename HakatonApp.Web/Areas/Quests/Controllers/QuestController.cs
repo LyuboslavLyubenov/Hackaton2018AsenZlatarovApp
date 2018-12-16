@@ -120,10 +120,12 @@
             => View(this.questService.GetQuestById(id));
 
         [Route("/Quest/Like/{id}")]
+        [HttpPost]
         public IActionResult LikeQuest(int id)
         {
             this.questService.LikeQuest(id);
-
+            
+            TempData["succesInfo"] = "Вие успешно подкрепихте инициатива!";
             return Redirect("/Home/Index");
         }
     }
