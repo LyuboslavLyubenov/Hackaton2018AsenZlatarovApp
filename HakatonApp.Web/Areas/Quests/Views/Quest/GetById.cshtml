@@ -3,8 +3,8 @@
     ViewData["Title"] = "All";
 }
 
-<div class="container center-block">
-    <div class="row">
+<div class="container jumbotron my-4">
+    <div class="row center-block">
         <div class="">
             <h4 class="text-center">
                 @Model.Name
@@ -26,22 +26,20 @@
             <div class="text-center">
                 <h4>Брой харесвания: </h4><p>@Model.NumOfLikes</p>
             </div>
-            @if (@*User.IsInRole("Admin")*@ /**/
-                                                       true)
-                        {
-                            <div class="text-center">
-                                @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
-                                <a asp-area="Vouchers" asp-controller="Voucher" asp-action="SendVoucher" asp-all-route-data="data" class="btn btn-success float-right">Изпрати ваучер</a>
-                            </div>
-                        }
-            @if (@*User != null*@ /**/
-                                             true)
-                        {
-                            <div class="text-center">
-                                @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
-                                <a asp-area="Quests" asp-controller="Quest" asp-action="LikeQuest" asp-all-route-data="data" class="btn btn-success float-right">Харесай</a>
-                            </div>
-                        }
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="text-center">
+                    @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
+                    <a asp-area="Vouchers" asp-controller="Voucher" asp-action="SendVoucher" asp-all-route-data="data" class="btn btn-success float-right">Изпрати ваучер</a>
+                </div>
+            }
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="text-center">
+                    @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
+                    <a asp-area="Quests" asp-controller="Quest" asp-action="LikeQuest" asp-all-route-data="data" class="btn btn-success float-right">Харесай</a>
+                </div>
+            }
         </div>
     </div>
 </div>

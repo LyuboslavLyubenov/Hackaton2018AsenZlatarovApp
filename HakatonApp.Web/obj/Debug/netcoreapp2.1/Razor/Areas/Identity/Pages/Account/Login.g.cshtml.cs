@@ -96,7 +96,7 @@ using HakatonApp.Web.Areas.Identity.Pages.Account;
             WriteLiteral("                    ");
             EndContext();
             BeginContext(691, 629, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a341a856851d4cfd932332df78e456b6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "522fa667581e458e8f14513aa24c9220", async() => {
                 BeginContext(801, 66, true);
                 WriteLiteral("\r\n                        <div>\r\n                            <p>\r\n");
                 EndContext();
@@ -198,7 +198,7 @@ WriteAttributeValue(" ", 1128, provider.DisplayName, 1129, 21, false);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(1422, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "58efb2f192e443b592eb28127c1a79fb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "af312c22287a497e82045d7dc171a0d7", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
