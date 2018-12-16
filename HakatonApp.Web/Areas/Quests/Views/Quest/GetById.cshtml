@@ -1,0 +1,48 @@
+﻿@model QuestServiceModel
+@{
+    ViewData["Title"] = "All";
+}
+
+<div class="container center-block">
+    <div class="row">
+        <div class="">
+            <h4 class="text-center">
+                @Model.Name
+            </h4>
+            @{
+                if (Model.Image != null)
+                {
+                    var base64 = Convert.ToBase64String(Model.Image);
+                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                    <img class="center-block" style="height: 300px; width: 400px;" src="@imgSrc" alt="">
+                }
+            }
+            <div class="text-center">
+                @Html.Raw(Model.Description)
+            </div>
+            <div class="text-center">
+                <h4>Дата на провежадане: </h4><p>@Model.DateOfQuest</p>
+            </div>
+            <div class="text-center">
+                <h4>Брой харесвания: </h4><p>@Model.NumOfLikes</p>
+            </div>
+            @if (@*User.IsInRole("Admin")*@ /**/
+                                                       true)
+                        {
+                            <div class="text-center">
+                                @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
+                                <a asp-area="Vouchers" asp-controller="Voucher" asp-action="SendVoucher" asp-all-route-data="data" class="btn btn-success float-right">Изпрати ваучер</a>
+                            </div>
+                        }
+            @if (@*User != null*@ /**/
+                                             true)
+                        {
+                            <div class="text-center">
+                                @{ var data = new Dictionary<string, string>() { { "id", Model.Id.ToString() } }; }
+                                <a asp-area="Quests" asp-controller="Quest" asp-action="LikeQuest" asp-all-route-data="data" class="btn btn-success float-right">Харесай</a>
+                            </div>
+                        }
+        </div>
+    </div>
+</div>
+

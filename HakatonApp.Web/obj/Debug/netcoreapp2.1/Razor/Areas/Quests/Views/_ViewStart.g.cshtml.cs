@@ -7,7 +7,11 @@ namespace AspNetCore
 {
     #line hidden
     using System;
-    using System.Collections.Generic;
+#line 6 "D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\Areas\Quests\Views\_ViewImports.cshtml"
+using System.Collections.Generic;
+
+#line default
+#line hidden
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
@@ -33,8 +37,13 @@ using HakatonApp.Web.Areas.Quests.Models;
 
 #line default
 #line hidden
+#line 5 "D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\Areas\Quests\Views\_ViewImports.cshtml"
+using HakatonApp.Services.Quests.Models;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Areas/Quests/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c3245de03fa45d8ad20b7ec52236f5c22f7561c8", @"/Areas/Quests/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"11c643a104a9585dc47e6da2b5e7d5f337fb9015", @"/Areas/Quests/Views/_ViewImports.cshtml")]
     public class Areas_Quests_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

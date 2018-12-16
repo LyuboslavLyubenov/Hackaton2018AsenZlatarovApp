@@ -5,11 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HakatonApp.Web.Models;
+using HakatonApp.Services;
 
 namespace HakatonApp.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IQuestService questService;
+
+        public HomeController(IQuestService questService)
+        {
+            this.questService = questService;
+        }
+
         public IActionResult Index()
         {
             var viewModel = new IndexViewModel()
@@ -29,7 +37,7 @@ namespace HakatonApp.Web.Controllers
                         Description = "slider item description asljdask djsakjdjjkdjks jdks jd ksjds jksj kjjjdjskdsjk"
                     }
                 },
-                RecentInitiatives = new []
+                RecentInitiatives = new[]
                 {
                     new Initiative()
                     {
@@ -47,7 +55,7 @@ namespace HakatonApp.Web.Controllers
                         Title = "Slider item title 3 sadsadsadsasadd dddsldk kkk",
                     },
                 },
-                ArchivedInitiatives = new []
+                ArchivedInitiatives = new[]
                 {
                     new Initiative()
                     {
@@ -77,9 +85,17 @@ namespace HakatonApp.Web.Controllers
                     },
                 }
             };
-            
+
             return View(viewModel);
         }
+
+        //public IActionResult Index()
+        //{
+        //    var approvedQuests = this.questService.getApprovedQuests();
+        //    var waithingForLikesQuests = this.questService.getProcessingQuests();
+
+
+        //}
 
         public IActionResult About()
         {

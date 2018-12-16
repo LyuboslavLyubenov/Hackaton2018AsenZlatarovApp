@@ -1,0 +1,16 @@
+﻿@model CodeFormModel
+@{
+    ViewData["Title"] = "Use";
+}
+
+<div class="container">
+    <form asp-area="Vouchers" enctype="multipart/form-data" asp-controller="Voucher" asp-action="Use" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Code">Код</label>
+            <input asp-for="Code" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-default">Изпрати</button>
+    </form>
+</div>
+

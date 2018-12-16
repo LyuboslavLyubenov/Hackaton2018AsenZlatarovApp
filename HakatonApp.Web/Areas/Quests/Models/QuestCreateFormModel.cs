@@ -1,6 +1,8 @@
 ﻿namespace HakatonApp.Web.Areas.Quests.Models
 {
     using Microsoft.AspNetCore.Http;
+    using System;
+    using System.Collections.Generic;
 
     public class QuestCreateFormModel
     {
@@ -10,6 +12,8 @@
 
         public int StatusId { get; set; }
 
-        public IFormFile[] Images { get; set; }
+        public DateTime DateOfQuest { get; set; }
+
+        public IFormFile Image { get; set; } 
     }
 }

@@ -1,12 +1,14 @@
 ﻿namespace HakatonApp.Services
 {
+    using System;
     using System.Collections.Generic;
     using HakatonApp.Data.Models;
     using HakatonApp.Services.Quests.Models;
+    using Microsoft.AspNetCore.Http;
 
     public interface IQuestService
     {
-        bool CreateQuest(string name, string description, int statusId);
+        bool CreateQuest(string name, string description, int statusId, DateTime dateOfEvent, IFormFile image);
 
         bool UpdateQuest(int questId, string name, string description, int statusId);
 
@@ -27,5 +29,7 @@
         IEnumerable<QuestServiceModel> getNotApprovedQuests();
 
         IEnumerable<QuestServiceModel> getAllQuests();
+
+        IEnumerable<QuestServiceModel> getTodayApprovedQuests();
     }
 }

@@ -2,6 +2,7 @@
 {
     using System;
     using System.IO;
+    using System.Linq;
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Http;
 
@@ -11,6 +12,10 @@
     {
         public bool SaveImages(IEnumerable<IFormFile> images, string questName)
         {
+            if (images.Count() < 1)
+            {
+                return true;
+            }
             try
             {
                 var questPath = Path.Combine(PathToImages, questName);

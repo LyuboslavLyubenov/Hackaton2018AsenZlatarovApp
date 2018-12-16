@@ -149,3 +149,13 @@ D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcor
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\_ViewImports.g.cshtml.cs
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\_ViewStart.g.cshtml.cs
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\Add.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\ApproveQuest.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Vouchers\Views\_ViewImports.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Vouchers\Views\_ViewStart.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Vouchers\Views\Voucher\Use.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Vouchers\Views\Voucher\SendVoucher.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\TodayApprovedQuests.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\GetAllQuests.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\GetAllApproved.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\GetAllQuestsInProcess.g.cshtml.cs
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Quests\Views\Quest\GetById.g.cshtml.cs

@@ -14,3 +14,4 @@ D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\net
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.AssemblyInfo.cs
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.dll
 D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.pdb
+D:\Projects\GitRepos\Hackaton2018AsenZlatarovApp\HakatonApp.Common\obj\Debug\netstandard2.0\HakatonApp.Common.csprojAssemblyReference.cache

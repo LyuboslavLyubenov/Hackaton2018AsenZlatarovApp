@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using HakatonApp.Data.Models;
+using HakatonApp.Web.Data.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -47,6 +48,9 @@ namespace HakatonApp.Web.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            [Display(Name = "Точки")]
+            public int Points { get; set; }
         }
 
         public async Task<IActionResult> OnGetAsync()
@@ -60,13 +64,15 @@ namespace HakatonApp.Web.Areas.Identity.Pages.Account.Manage
             var userName = await _userManager.GetUserNameAsync(user);
             var email = await _userManager.GetEmailAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var points = user.Points;
 
             Username = userName;
 
             Input = new InputModel
             {
                 Email = email,
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Points = points
             };
 
             IsEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);

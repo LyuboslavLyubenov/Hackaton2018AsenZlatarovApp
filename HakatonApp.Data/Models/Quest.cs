@@ -22,8 +22,12 @@
 
         public DateTime PublishDate { get; set; }
 
+        public DateTime DateOfQuest { get; set; }
+
         public int ParticipantsNumeber { get; set; }
 
         public int PointsPerPartisipant { get; set; }
+
+        public byte[] Image { get; set; }
     }
 }

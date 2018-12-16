@@ -7,6 +7,8 @@
     using HakatonApp.Data.Models;
     using HakatonApp.Services.Quests.Models;
     using HakatonApp.Web.Data.Data;
+    using Microsoft.AspNetCore.Http;
+    using System.IO;
 
     public class QuestService: IQuestService, IService
     {
@@ -36,19 +38,27 @@
 
             return false;
         }
-
-
-
-        public bool CreateQuest(string name, string description, int statusId)
+        
+        public bool CreateQuest(string name, string description, int statusId, DateTime dateOfEvent, IFormFile image)
         {
             try
             {
+                byte[] imgArr = null;
+                using (var iStr = image.OpenReadStream())
+                using (var ms = new MemoryStream())
+                {
+                    iStr.CopyTo(ms);
+                    imgArr = ms.ToArray();
+                }
+
                 this.db.Quests.Add(new Quest
                 {
                     Description = description,
                     Name = name,
                     StatusId = statusId,
-                    PublishDate = DateTime.UtcNow
+                    PublishDate = DateTime.UtcNow,
+                    DateOfQuest = dateOfEvent,
+                    Image = imgArr
                 });
 
                 this.db.SaveChanges();
@@ -67,10 +77,13 @@
                 .Quests
                 .Select(q => new QuestServiceModel
                 {
+                    Id = q.Id,
                     Name = q.Name,
                     statusId = q.StatusId,
                     Description = q.Description,
-                    PublishDate = q.PublishDate
+                    PublishDate = q.PublishDate,
+                    DateOfQuest = q.DateOfQuest,
+                    Image = q.Image
                 });
 
         public IEnumerable<QuestServiceModel> getApprovedQuests()
@@ -79,10 +92,13 @@
                 .Where(q => q.StatusId == (int)QuestStatusEnum.Approved)
                 .Select(q => new QuestServiceModel
                 {
+                    Id = q.Id,
                     Name = q.Name,
                     Description = q.Name,
                     PublishDate = q.PublishDate,
-                    statusId = q.StatusId
+                    statusId = q.StatusId,
+                    DateOfQuest = q.DateOfQuest,
+                    Image = q.Image
                 })
                 .ToList();
 
@@ -92,10 +108,13 @@
                 .Where(q => q.StatusId == (int)QuestStatusEnum.Processing)
                 .Select(q => new QuestServiceModel
                 {
+                    Id = q.Id,
                     Name = q.Name,
                     Description = q.Description,
                     PublishDate = q.PublishDate,
-                    statusId = q.StatusId
+                    statusId = q.StatusId,
+                    DateOfQuest = q.DateOfQuest,
+                    Image = q.Image
                 })
                 .ToList();
 
@@ -105,10 +124,13 @@
                 .Where(q => q.LikesNumber > GlobalConstants.NumOfLikesForProcessing)
                 .Select(q => new QuestServiceModel
                 {
+                    Id = q.Id,
                     Name = q.Name,
                     Description = q.Description,
                     PublishDate = q.PublishDate,
-                    statusId = q.StatusId
+                    statusId = q.StatusId,
+                    DateOfQuest = q.DateOfQuest,
+                    Image = q.Image
                 });
 
         public QuestServiceModel GetQuestById(int questId)
@@ -117,15 +139,34 @@
                 .Where(q => q.Id == questId)
                 .Select(q => new QuestServiceModel
                 {
+                    Id = q.Id,
                     Name = q.Name,
                     Description = q.Description,
                     statusId = q.StatusId,
-                    PublishDate = q.PublishDate
+                    PublishDate = q.PublishDate,
+                    DateOfQuest = q.DateOfQuest,
+                    Image = q.Image,
+                    NumOfLikes = q.LikesNumber
                 })
                 .FirstOrDefault();
 
         public Quest GetQuestWithHallInfoById(int questId)
             => this.db.Quests.Find(questId);
+
+        public IEnumerable<QuestServiceModel> getTodayApprovedQuests()
+            => this.db
+                .Quests
+                .Where(q => q.DateOfQuest == DateTime.UtcNow && q.StatusId == (int)QuestStatusEnum.Approved)
+                .Select(q => new QuestServiceModel
+                {
+                    Id = q.Id,
+                    Name = q.Name,
+                    Description = q.Description,
+                    PublishDate = q.PublishDate,
+                    statusId = q.StatusId,
+                    DateOfQuest = q.DateOfQuest
+                })
+                .ToList();
 
         public bool LikeQuest(int questId)
         {
